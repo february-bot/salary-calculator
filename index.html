@@ -419,7 +419,7 @@
       </div>
 
       <div class="footer-note">
-        Formula: New Basic = Old Basic + 50% of (New Min − Old Min) + (Old Basic − Old Min)
+        Formula: New Basic = Old Basic(Min) + 50% of (New Min − Old Min) + (Old Basic − Old Min)
       </div>
     </div>
   </div>
@@ -459,7 +459,7 @@
     // Calculation
     const basicDifference = oldBasic - oldBasicRange[grade];
     const basicIncrease = (newBasicRange[grade] - oldBasicRange[grade]) / 2;
-    const currentBasic = oldBasic + basicIncrease + basicDifference;
+    const currentBasic = oldBasicRange[grade] + basicIncrease + basicDifference;
 
     // Display
     document.getElementById('resultVal').textContent = fmt(currentBasic);
